@@ -2,8 +2,9 @@ import os
 import telebot
 from models import Carpool, session
 from functions import check_available_seats, check_time, format_time, schedule_ride, get_all_rides, get_rides_by_dir
+from background import keep_alive
 
-BOT_TOKEN = os.environ.get('BOT_TOKEN')
+BOT_TOKEN = os.environ['BOT_TOKEN']
 tb = telebot.TeleBot(token=BOT_TOKEN)
 
 @tb.message_handler(commands=['ida', 'volta'])
@@ -125,8 +126,6 @@ def set_ride_to_full(message):
     ride.save()
 
     return tb.send_message(chat_id, f'@{username} atualizou o número de vagas de {direction} para 0')
-    
-try:
-    tb.infinity_polling()
-except:
-    print('Failed')
+
+keep_alive()
+tb.polling(non_stop=True, interval=0)
