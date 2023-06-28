@@ -7,6 +7,6 @@ Carpool bot for managing carpool between a fixed place and people's homes
 ## Feel free to contact me on telegram
 [fseda Telegram](https://t.me/felipeseda)
 
-Hosted on [Repl.it](Replit.com)
+Hosted on [Repl.it](https://Replit.com)
 
 Documentation coming soon...
