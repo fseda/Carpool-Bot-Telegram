@@ -1,5 +1,5 @@
 # carpool-bot-telegram
-Carpool bot for managing carpool between UFRJ - Fundão and student's homes
+Carpool bot for managing carpool between a fixed place and people's homes
 
 ## Add to your carpool group!
 [Carpool Bot Telegram](https://t.me/CaronaNitBot)
